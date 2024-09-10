@@ -6,6 +6,36 @@
 
 class Book {
   // YOUR CODE HERE
+  #title
+  #author
+  #price 
+
+  constructor(title, author, price){
+    this.#title = title 
+    this.#author = author
+    this.#price = price
+  }
+
+  get price(){
+    return this.#price
+  }
+
+  addDiscount(discount){
+    this.#price = this.#price - this.#price * discount * .01
+    return this.#price
+  }
+
+  get title(){
+    return this.#title
+  }
+
+  set title(newTitle){
+    if (newTitle === ""){
+      this.#title = this.#title
+    }else {
+      this.#title = newTitle 
+    }
+  }
 }
 
 
